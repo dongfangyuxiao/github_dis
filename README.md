@@ -1,7 +1,7 @@
 # github_dis
 
-脚本说明：
-	一款精简版github信息泄露搜集工具一款精简版的github信息泄露工具
+说明：
+	一款精简版github信息泄露搜集工具
 https://github.com/dongfangyuxiao/github_dis/
 看了很多大佬的工具，自己写了一款，用起来效果还不错，分享给大家，欢迎多提意见
 
