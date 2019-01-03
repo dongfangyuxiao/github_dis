@@ -13,7 +13,7 @@
 
 6、	脚本采用单线程，原因在于频率快的话会被封禁，测试，keyword中执行一个关键字需要时间在1分钟—2分钟之间。
 
-7、	python2.7,需要的模块在requestsment.txt中，pip install -r requestsments.txt
+7、	python2.7,需要的模块在requestsment.txt中，kali下可直接运行，其他的可以根据提示安装
 
 参考：https://github.com/repoog/GitPrey
 	  https://github.com/FeeiCN/GSIL
