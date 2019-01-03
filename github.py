@@ -83,7 +83,7 @@ class Github(object):
             #print keyword
             while not self.type.empty():
                 type= self.type.get()
-                pattern = re.compile('data-search-type="Code">(.*?)</span>')
+                pattern = re.compile('data-search-type="Code">(\d+)</span>')
                 url = "https://github.com/search?q={0}+{1}&type=Code".format(keyword, type)
                 print url
                 self.write('rusult   for searching  '+keyword +'  '+ type)
