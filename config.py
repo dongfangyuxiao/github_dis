@@ -12,7 +12,7 @@ headers = {
     'Cache-Control': 'no-cache',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Language':'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-    'Cookie': '_ga=GA1.2.338497014.1545292375; _octo=GH1.1.1984643585.1545292378; tz=Asia%2FShanghai; has_recent_activity=1; user_session=JwIq47d4aYaDg1JKDDmoeuSqJJMEqSKhPI9fAEDuoSw9AGxa; __Host-user_session_same_site=JwIq47d4aYaDg1JKDDmoeuSqJJMEqSKhPI9fAEDuoSw9AGxa; logged_in=yes; dotcom_user=dongfangyuxiao; _gat=1; _gh_sess=UXBScm5YWWx5dDV0bVFJZFNtM0RNZEEvcEFMcmtaaWFYeFF6T3dKSDcxR3NtUXB3NlJkaHVsemI5YWRlS1RTOUg2Sit3bWxaNFg0UWh4Wmg2R09IK3FLeURSSnd0ajQ2K2xnOUVLR1phb3ZaYy82akcycmxYNnpsODVOQ2M5cTgwaVZxV0lMRGJ0S3hYZ0thN1hiNFRWWlBmZ0tsY3JZTEhtRWFvVVNybDBOTnFvTzhFWDFWR3hrbWY4bFcwR1grRU43dWFBNlBCeEUxdG5ZSldrSCsvOVV6ZEpydDk4d3AvNGhPV1YyRnVaNnZEc1hWUkhmT2xOd05YOU5PdHd1Ny0tMHlwMXE2WUhrcC9vbVN3OXkvQk0yUT09--3ecd9e84d753e82c9d56bd7c63272b1154a826ca'
+    'Cookie': '_'
 }
 
 def write(line):
