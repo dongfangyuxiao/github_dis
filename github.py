@@ -69,7 +69,7 @@ class Github(object):
                 if x not in new_list:
                     new_list.append(x)
                     x = 'https://github.com'+x
-                    print x
+                    #print x
                     self.write(x)
                 # print x
             # time.sleep(random.uniform(1, 3))
