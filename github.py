@@ -10,7 +10,7 @@ import math
 import time
 import random
 import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)#屏蔽ssl警告
 class Github(object):
     def __init__(self):
         print "Github scan is running"
@@ -68,11 +68,12 @@ class Github(object):
             resc = requests.get(url, headers=self.headers, cookies=self.cookies,timeout=5, verify=False)
             code_list = code_pattern.findall(resc.content)
             for x in code_list:
-                if x not in new_list:
-                    new_list.append(x)
-                    x = 'https://github.com'+x
-                    #print x
-                    self.write(x)
+                if ('.htm' not in x) and ('.js' not in x):#去除js和htm、html文件 
+                    if x not in new_list:
+                        new_list.append(x)
+                        x = 'https://github.com'+x
+                        #print x
+                        self.write(x)
                 # print x
             # time.sleep(random.uniform(1, 3))
         except Exception as e:
