@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 import math
 import time
 import random
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 class Github(object):
     def __init__(self):
         print "Github scan is running"
