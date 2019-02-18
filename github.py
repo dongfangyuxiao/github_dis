@@ -27,15 +27,15 @@ class Github(object):
         self.__auto_login()
 
     def load_keyword(self):#加载关键字，存入队列
-        self.key = Queue.Queue()
+        self.key = []
         with open('keyword.txt') as f:
             for line in f:
-                self.key.put(line.strip())
+                self.key.append(line.strip())
     def load_type(self):#加载搜索类型，存入队列
-        self.type = Queue.Queue()
+        self.type = []
         with open('type.txt') as f:
             for line in f:
-                self.type.put(line.strip())
+                self.type.append(line.strip())
 
     def write(self,line):#把查找到的信息写入文件
         with open('github.txt','a+') as f:
@@ -82,11 +82,8 @@ class Github(object):
             pass
 
     def run(self):
-        while not self.key.empty():
-            keyword = self.key.get()
-            #print keyword
-            while not self.type.empty():
-                type= self.type.get()
+        for keyword in self.key:
+           for type in self.type: 
                 pattern = re.compile('data-search-type="Code">(.*?)</span>')
                 url = "https://github.com/search?q={0}+{1}&type=Code".format(keyword, type)
                 print url
