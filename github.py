@@ -68,12 +68,13 @@ class Github(object):
             resc = requests.get(url, headers=self.headers, cookies=self.cookies,timeout=5, verify=False)
             code_list = code_pattern.findall(resc.content)
             for x in code_list:
-                if ('.htm' not in x) and ('.js' not in x):#去除js和htm、html文件 
-                    if x not in new_list:
-                        new_list.append(x)
-                        x = 'https://github.com'+x
+                if ('.htm' not in x) and ('.js' not in x):#去除js和htm、html文件
+                    if (x!="") and ('https' not in x):
+                        if x not in new_list:
+                            new_list.append(x)
+                            x = 'https://github.com'+x
                         #print x
-                        self.write(x)
+                            self.write(x)
                 # print x
             # time.sleep(random.uniform(1, 3))
         except Exception as e:
