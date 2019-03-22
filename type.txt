@@ -1,66 +1,9 @@
-jdbc
-login
-_rsa
-_dsa
-_ed25519
-_ecdsa
-username
-uname
-passwd
-password
-bash
-zsh
-psql
-pgpass
-mssql
-oracle
-muttrc
-s3cfg
-ovpn
-bashrc
-zshrc
-bash_profile
-zsh_profile
-bash_aliases
-zsh_aliases
-secret_token
-schema.rb
-database
-kdb
-agilekeychain
-keychain
-pcap
-private.key
-jenkins
-zookeeper
-weblogic
-sftp
-htpasswd
-netrc
-pubxml
-proftpdpasswd
-dockercfg
-npmrc
-172.
-192.
-mysql
-ftp
-ssh
-smtp
-websphere
-pop
-jboss
-tomcat
-jetty
-glashfish
-kafka
-thrift
-spark
-redis
-resin
-mongodb
-postgresql
-elasticsearch
-nginx
-key
-token
+port OR auth OR user OR login OR email  filename:config filename:credential filename:properties filename:backup filename:dump filename:password filename:secret filename:setting filename:log filename:sql
+ip OR host OR domain OR url OR proxy filename:config filename:credential filename:properties filename:backup filename:dump filename:password filename:secret filename:setting filename:log filename:sql
+jdbc OR password OR passwd OR pass OR pwd  filename:config filename:credential filename:properties filename:backup filename:dump filename:password filename:secret filename:setting filename:log filename:sql
+filename:config filename:credential filename:properties filename:backup filename:dump filename:password filename:secret filename:setting filename:log filename:sql
+filename:_rsa filename:_dsa filename:_ed25519 filename:_ecdsa filename:bash_history filename:zsh_history filename:mysql_history filename:psql_history filename:pgpass
+filename:dbeaver-data-sources.xml filename:muttrc filename:s3cfg filename:ovpn filename:bashrc filename:zshrc filename:bash_profile filename:zsh_profile filename:bash_aliases
+filename:zsh_aliases filename:secret_token.rb filename:schema.rb filename:database.yml filename:kdb filename:agilekeychain filename:keychain filename:pcap filename:private.key
+filename:jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml filename:htpasswd filename:netrc filename:content.xml filename:pubxml filename:Favorites.plist filename:proftpdpasswd
+filename:robomongo.json filename:filezilla.xml filename:recentservers.xml filename:ventrilo_srv.ini filename:dockercfg filename:npmrc
