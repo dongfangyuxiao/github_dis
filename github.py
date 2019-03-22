@@ -105,9 +105,9 @@ class Github(object):
                     pages[0] = str(1000)
                 if '+' in pages[0]:
                     pages[0] = pages[0].replace('+', '')
-                print pages[0]
+                #print pages[0]
                 pmax = int(pages[0]) / 10 + 2  # 先去判断总共有多少页
-                print pmax
+                #print pmax
                 time.sleep(random.uniform(1, 2))  # 随机sleep random
                 for p in range(1, pmax):
                     #print p
