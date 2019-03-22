@@ -1,6 +1,3 @@
-port+OR+auth+OR+user+OR+login+OR+email++filename:config+filename:credential+filename:properties+filename:backup+filename:dump+filename:password+filename:secret+filename:setting+filename:log+filename:sql
-ip+OR+host+OR+domain+OR+url+OR+proxy+filename:config+filename:credential+filename:properties+filename:backup+filename:dump+filename:password+filename:secret+filename:setting+filename:log+filename:sql
-jdbc+OR+password+OR+passwd+OR+pass+OR+pwd++filename:config+filename:credential+filename:properties+filename:backup+filename:dump+filename:password+filename:secret+filename:setting+filename:log+filename:sql
 filename:config+filename:credential+filename:properties+filename:backup+filename:dump+filename:password+filename:secret+filename:setting+filename:log+filename:sql
 filename:_rsa+filename:_dsa+filename:_ed25519+filename:_ecdsa+filename:bash_history+filename:zsh_history+filename:mysql_history+filename:psql_history+filename:pgpass
 filename:dbeaver-data-sources.xml+filename:muttrc+filename:s3cfg+filename:ovpn+filename:bashrc+filename:zshrc+filename:bash_profile+filename:zsh_profile+filename:bash_aliases
