@@ -93,9 +93,14 @@ class Github(object):
                     # print res.content
                     pages = pattern.findall(res.content)
                     #print pages
-                    if 'K' or 'M' in pages[0]:
-                        pages[0]=int(100)#超过1000页，只搜搜前100页
-                    pmax = int(math.ceil(int(pages[0]) / 10) + 2)#先去判断总共有多少页
+                    if 'K'  in pages[0]:
+                        pages[0]=str(1000)#超过1000页，只搜搜前100页
+                    if 'M' in pages[0]:
+                        pages[0]=str(1000)
+                    if '+' in pages[0]:
+                        pages[0] = pages[0].replace('+','')
+   
+                    pmax = int(math.ceil(int(pages[0]) / 10) + 1)#先去判断总共有多少页
                     #print pmax
                     time.sleep(random.uniform(1, 2))#随机sleep random
                     for p in range(1, pmax):
