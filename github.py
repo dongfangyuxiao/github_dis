@@ -73,10 +73,10 @@ class Github(object):
             resc = requests.get(url, headers=self.headers, cookies=self.cookies, timeout=5, verify=False)
             code_list = code_pattern.findall(resc.content)
             for x in code_list:
-            if x not in new_list:
-                new_list.append(x)
+                if x not in new_list:
+                    new_list.append(x)
                 #print x
-                self.write(x)
+                    self.write(x)
 
             # print x
             # time.sleep(random.uniform(1, 3))
