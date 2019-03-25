@@ -72,17 +72,18 @@ class Github(object):
         try:
             resc = requests.get(url, headers=self.headers, cookies=self.cookies, timeout=5, verify=False)
             code_list = code_pattern.findall(resc.content)
+            for x in code_list:
+            if x not in new_list:
+                new_list.append(x)
+                #print x
+                self.write(x)
 
             # print x
             # time.sleep(random.uniform(1, 3))
         except Exception as e:
             print e
             pass
-        for x in code_list:
-            if x not in new_list:
-                new_list.append(x)
-                #print x
-                self.write(x)
+        
 
     def run(self):
         for keyword in self.key:
@@ -95,28 +96,29 @@ class Github(object):
                     res = requests.get(url, headers=self.headers, cookies=self.cookies, timeout=3, verify=False)
                     # print res.content
                     pages = pattern.findall(res.content)
+                    if len(pages)==0:
+                        pmax=int(1)
+                    else:
+                        if 'K' in pages[0]:
+                            pages[0] = str(1000)  # 超过1000页，只搜搜前100页
+                        if 'M' in pages[0]:
+                            pages[0] = str(1000)
+                        if '+' in pages[0]:
+                            pages[0] = pages[0].replace('+', '')
+                    #print pages[0]
+                    pmax = int(pages[0]) / 10 + 2  # 先去判断总共有多少页
+                #print pmax
+                    time.sleep(random.uniform(1, 2))  # 随机sleep random
+                    for p in range(1, pmax):
+                    #print p
+                        courl = "https://github.com/search?p={0}&q={1}+{2}&type=Code".format(p, keyword, type)
+                    #print courl
+                        self.seach(courl)
                     # print pages
                 except Exception as e:
                     print e
                     pass
-                if len(pages)==0:
-                    pmax=int(1)
-                else:
-                    if 'K' in pages[0]:
-                        pages[0] = str(1000)  # 超过1000页，只搜搜前100页
-                    if 'M' in pages[0]:
-                        pages[0] = str(1000)
-                    if '+' in pages[0]:
-                        pages[0] = pages[0].replace('+', '')
-                    #print pages[0]
-                    pmax = int(pages[0]) / 10 + 2  # 先去判断总共有多少页
-                #print pmax
-                time.sleep(random.uniform(1, 2))  # 随机sleep random
-                for p in range(1, pmax):
-                    #print p
-                    courl = "https://github.com/search?p={0}&q={1}+{2}&type=Code".format(p, keyword, type)
-                    #print courl
-                    self.seach(courl)
+                
 
 
 if __name__ == "__main__":
